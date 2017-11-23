@@ -297,6 +297,7 @@
 		5E949FC11ECB07C10028E0B3 /* QQ20170516-181104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20170516-181104.png"; sourceTree = "<group>"; };
 		7A112A051FBD60B200CBC35A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7A112A061FBD60B200CBC35A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7A2AE5871FC6B0530083E0CA /* TEXT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEXT.h; sourceTree = "<group>"; };
 		7A5501FD1FBD8C1E001FEB6E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A96A41C1FBD1EDE004A9C46 /* Foundation_defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foundation_defines.h; sourceTree = "<group>"; };
 		7A9D809A1FBBE1D900C5363F /* TextKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextKeyboardView.h; sourceTree = "<group>"; };
@@ -412,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				5E949FC11ECB07C10028E0B3 /* QQ20170516-181104.png */,
+				7A2AE5871FC6B0530083E0CA /* TEXT.h */,
 				5E949D361EC99E600028E0B3 /* Main */,
 				5E949EC31EC9E0B70028E0B3 /* Expand */,
 				5E949D3C1EC99E6D0028E0B3 /* Resource */,
