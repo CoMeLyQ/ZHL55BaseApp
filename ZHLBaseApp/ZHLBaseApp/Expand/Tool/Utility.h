@@ -311,7 +311,8 @@ typedef void (^LocationUserDataBlock)(BOOL isSuccess);//获取用户位置
  当前app正在显示的控制器
  */
 @property(nonatomic,weak)BaseViewController*currentViewController;
-
+//当前控制器的信息
+@property(nonatomic,strong)NSMutableString*ControllerInfor;
 
 //万能控制器
 + (UIViewController *)getCurrentVC;

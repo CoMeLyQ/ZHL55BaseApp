@@ -20,7 +20,9 @@
     
     [self navbarTitle:@"登录"];
     
+    [self backButton];
     
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

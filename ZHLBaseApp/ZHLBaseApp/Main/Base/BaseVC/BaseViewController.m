@@ -43,6 +43,49 @@
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     }
   
+    UTILITY.currentViewController=self;
+    
+    UTILITY.ControllerInfor=[NSMutableString new];
+    
+    [UTILITY.ControllerInfor appendFormat:@"\n跳转到  %@ 页面 %@",self.navTitle,NSStringFromClass([self class])];
+    //    [NSString stringWithFormat:@"\n跳转到  %@ 页面 %@",self.navTitle,NSStringFromClass([self class])];
+    if ([self.userInfo isKindOfClass:[NSDictionary class]]) {
+        @try {
+            [ UTILITY.ControllerInfor appendFormat:@"\nBase UserInfo:%@",[self.userInfo jsonStrSYS]];
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    }else{
+        if (self.userInfo) {
+            [ UTILITY.ControllerInfor appendFormat:@"\nBase UserInfo:%@",self.userInfo];
+        }
+    }
+    if ([self.otherInfo isKindOfClass:[NSDictionary class]]) {
+        @try {
+            [ UTILITY.ControllerInfor appendFormat:@"\nBase OtherInfo:%@",[self.otherInfo jsonStrSYS]];
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+        
+    }else{
+        if (self.otherInfo) {
+            [ UTILITY.ControllerInfor appendFormat:@"\nBase OtherInfo:%@",self.otherInfo];
+        }
+        
+    }
+    
+    NSLog(@"%@",UTILITY.ControllerInfor);
+    
+    
+    
 }
 - (void)viewDidLoad
 {
@@ -113,7 +156,25 @@
     return self.navView;
     
 }
-
+- (void)setTitle:(NSString *)title
+{
+    for (UIView *view in self.navView.subviews) {
+        if ([view isKindOfClass:[UILabel class]]) {
+            ((UILabel*)view).text = title;
+            break;
+        }
+    }
+    [super setTitle:title];
+}
+- (NSString*)title
+{
+    for (UIView *view in self.navView.subviews) {
+        if ([view isKindOfClass:[UILabel class]]) {
+            return ((UILabel*)view).text;
+        }
+    }
+    return [super title];
+}
 
 
 - (UIButton*)leftButton:(NSString*)title image:(NSString*)image sel:(SEL)sel
@@ -205,11 +266,38 @@
     }
     return base;
 }
+- (UIButton*)backButton
+{
+    return [self backButton:self];
+}
+- (UIButton*)backButton:(BaseViewController*)target
+{
+    UIButton *button = (UIButton*)[self.navView viewWithTag:100];
+    if (button) {
+        return button;
+    }
+    button = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 100, 44)];
+    [button setImage:[UIImage imageNamed:@"headreturn"] forState:UIControlStateNormal];
+    [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
+    [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    //[button setTitle:@"返回" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.font = Font(12);
+    button.tag = 100;
+    [button addTarget:target action:@selector(returnVC) forControlEvents:UIControlEventTouchUpInside];
+    [target.navView addSubview:button];
+    return button;
+}
 
 -(void)returnVC{
     
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    [SVProgressHUD dismiss];
+    if (self.navigationController) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
    
     
 }
@@ -280,6 +368,14 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-
+- (NSString*)navTitle
+{
+    UILabel *label = (UILabel*)[self.navView viewWithTag:101];
+    
+    if (label) {
+        return label.text;
+    }
+    return @"";
+}
 @end
 

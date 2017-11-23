@@ -22,4 +22,6 @@
 - (void)popController:(NSString*)controllerstr withSel:(SEL)sel withObj:(id)info;
 //返回上一页面
 -(void)returnVC;
+- (UIButton*)backButton;
+- (UIButton*)backButton:(BaseViewController*)target;
 @end

@@ -88,6 +88,7 @@
 		5E949FC21ECB07C10028E0B3 /* QQ20170516-181104.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E949FC11ECB07C10028E0B3 /* QQ20170516-181104.png */; };
 		7A112A041FBD54B700CBC35A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9D80CE1FBBE8D000C5363F /* CoreData.framework */; };
 		7A112A071FBD60B300CBC35A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A112A061FBD60B200CBC35A /* LoginViewController.m */; };
+		7A5501FE1FBD8C1E001FEB6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5501FD1FBD8C1E001FEB6E /* LaunchScreen.storyboard */; };
 		7A9D809C1FBBE1D900C5363F /* TextKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D809B1FBBE1D900C5363F /* TextKeyboardView.m */; };
 		7A9D809F1FBBE20400C5363F /* XHStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D809E1FBBE20400C5363F /* XHStarRateView.m */; };
 		7A9D80A21FBBE36000C5363F /* myLabelCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D80A11FBBE36000C5363F /* myLabelCategory.m */; };
@@ -296,6 +297,7 @@
 		5E949FC11ECB07C10028E0B3 /* QQ20170516-181104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20170516-181104.png"; sourceTree = "<group>"; };
 		7A112A051FBD60B200CBC35A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7A112A061FBD60B200CBC35A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7A5501FD1FBD8C1E001FEB6E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A96A41C1FBD1EDE004A9C46 /* Foundation_defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foundation_defines.h; sourceTree = "<group>"; };
 		7A9D809A1FBBE1D900C5363F /* TextKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextKeyboardView.h; sourceTree = "<group>"; };
 		7A9D809B1FBBE1D900C5363F /* TextKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextKeyboardView.m; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				5E949D3E1EC99E6D0028E0B3 /* Vender */,
 				5E949D0A1EC9996A0028E0B3 /* Assets.xcassets */,
 				5E949D0F1EC9996A0028E0B3 /* Info.plist */,
+				7A5501FD1FBD8C1E001FEB6E /* LaunchScreen.storyboard */,
 				5E949CFE1EC9996A0028E0B3 /* Supporting Files */,
 			);
 			path = ZHLBaseApp;
@@ -1141,6 +1144,7 @@
 				5E949FC21ECB07C10028E0B3 /* QQ20170516-181104.png in Resources */,
 				5E949D0B1EC9996A0028E0B3 /* Assets.xcassets in Resources */,
 				7A9D81171FBC10E200C5363F /* AppConfig.json in Resources */,
+				7A5501FE1FBD8C1E001FEB6E /* LaunchScreen.storyboard in Resources */,
 				5E949FBD1ECAF69C0028E0B3 /* MLSelectPhoto.bundle in Resources */,
 				5E949F731ECAF6920028E0B3 /* KNPhotoBrower.bundle in Resources */,
 			);
