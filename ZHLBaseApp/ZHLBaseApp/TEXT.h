@@ -148,6 +148,91 @@ static NSString * CRMMenuTableViewCellID  = @"CRMMenuTableViewCellID";
  
 */
 
+/*
+ 
+@property (nonatomic,strong)UICollectionView * collectionView;
+static NSString * ArrangeJobListCellID = @"ArrangeJobListCellID";
+
+
+- (UICollectionView *)collectionView{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *fl = [[UICollectionViewFlowLayout alloc]init];
+        fl.minimumLineSpacing = 0;
+        fl.minimumInteritemSpacing = 0;
+        UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(10, 64 + 55 + 10, kScreenWidth, kScreenHeight - 64) collectionViewLayout:fl];
+        collectionView.dataSource = self;
+        collectionView.delegate = self;
+        collectionView.showsHorizontalScrollIndicator = NO;
+        collectionView.showsVerticalScrollIndicator = NO;
+        collectionView.scrollsToTop = NO;
+        collectionView.backgroundColor = [UIColor clearColor];
+        [collectionView registerClass:[ArrangeJobListCell class] forCellWithReuseIdentifier:ArrangeJobListCellID];
+        
+        
+        
+        [self.view addSubview:collectionView];
+        _collectionView = collectionView;
+    }
+    return _collectionView;
+}
+ #pragma mark -  collectionview代理方法
+ -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    
+    
+    
+    return 1;
+    
+}
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.listArray.count;
+    
+}
+//header
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    return CGSizeZero;
+    
+}
+//footer
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
+    
+    return CGSizeZero;
+}
+//cell
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(0,0);
+    
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ArrangeJobListCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:ArrangeJobListCellID forIndexPath:indexPath];
+   
+    
+    
+    
+    
+    return cell;
+}
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]){
+        
+    }else{
+        
+    }
+    
+    return [UICollectionReusableView new];
+}
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    
+    return UIEdgeInsetsMake(0, 0, 1, 1);
+    
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%@",indexPath);
+    
+    
+    
+}
+*/
 /**
  //textField常用协议
 
@@ -255,6 +340,11 @@ static NSString * CRMMenuTableViewCellID  = @"CRMMenuTableViewCellID";
     
 }
 */
+
+
+
+
+
 
 
 #endif /* TEXT_h */
